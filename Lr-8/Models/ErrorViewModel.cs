@@ -1,4 +1,4 @@
-namespace FilterApp.Models
+namespace AspNetMVC.Models
 {
     public class ErrorViewModel
     {

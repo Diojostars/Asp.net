@@ -1,10 +1,8 @@
-﻿using FilterApp.Models;
+﻿using AspNetMVC.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using System.Diagnostics;
-using System.IO;
 
-namespace FilterApp.Controllers
+namespace AspNetMVC.Controllers
 {
     public class HomeController : Controller
     {
@@ -15,13 +13,11 @@ namespace FilterApp.Controllers
             _logger = logger;
         }
 
-        [ServiceFilter(typeof(LogActionFilter))]
         public IActionResult Index()
         {
             return View();
         }
 
-        [ServiceFilter(typeof(UniqueUsersFilter))]
         public IActionResult Privacy()
         {
             return View();
